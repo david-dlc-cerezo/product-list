@@ -1,3 +1,9 @@
+// Bootstrap
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+// Font awesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 $color-hover: #5aadbb;
 $color-black: #1f1f1f;
 
@@ -5,6 +11,7 @@ html, body, #root {
   margin: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 body, h1, h2, h3 {
@@ -54,29 +61,6 @@ small {
   }
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-}
-.title-h1 {
-  font-weight: 300;
-  font-size: 4rem;
-  margin: 1rem;
-}
-.title-logo {
-  height: 12rem;
-  background-color: white;
-  border-radius: 1rem;
-  margin: 1rem;
-}
-.title-h2 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin: .5rem;
-}
-
 .footer {
   padding: 0.5rem;
   font-size: 1rem;
@@ -90,12 +74,12 @@ $tech-logo-size: 4rem;
     padding: 1rem;
     margin: 1rem 0;
     border-top: 1px solid lighten($color-black, 70%);
+
+    h2 {
+        text-align: center;
+    }
 }
-.techs-h2 {
-  font-weight: 300;
-  font-size: 1.5rem;
-  text-align: center;
-}
+
 .techs {
   display: flex;
   flex-direction: row;
@@ -104,7 +88,7 @@ $tech-logo-size: 4rem;
 }
 
 .tech {
-    width: 110px;
+    width: 120px;
     border: 1px solid lightgray;
     border-radius: 0.8rem;
     margin: 0.6rem;
@@ -114,17 +98,17 @@ $tech-logo-size: 4rem;
     .tech-logo {
         width: $tech-logo-size;
         height: $tech-logo-size;
-        margin: 0;
+        margin: 0 0 0.5rem 0;
     }
 }
 
-
-.tech-h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    text-align: center;
+// content
+.content {
+    margin: 5rem;
 }
 
-.text-muted {
-    color: lighten($color-black, 20%);
+.form-inline {
+    .form-group {
+        padding: 0 0.5rem;
+    }
 }

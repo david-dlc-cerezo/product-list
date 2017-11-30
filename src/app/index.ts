@@ -3,23 +3,29 @@ import {BrowserModule} from '@angular/platform-browser';
 import {routing, RootComponent} from './routes';
 
 import {TechsModule} from './techs';
+import {AppFormsModule} from './forms';
 
 import {MainComponent} from './main';
 import {HeaderComponent} from './header';
-import {TitleComponent} from './title';
 import {FooterComponent} from './footer';
+import { AlertService, AuthenticationService, UserService } from './services/index';
 
 @NgModule({
   imports: [
     BrowserModule,
     routing,
-    TechsModule
+    TechsModule,
+    AppFormsModule
+  ],
+  providers: [  
+      AlertService,
+      AuthenticationService,
+      UserService
   ],
   declarations: [
     RootComponent,
     MainComponent,
     HeaderComponent,
-    TitleComponent,
     FooterComponent
   ],
   bootstrap: [RootComponent]
