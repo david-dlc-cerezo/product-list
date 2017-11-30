@@ -1,3 +1,6 @@
+$color-hover: #5aadbb;
+$color-black: #1f1f1f;
+
 html, body, #root {
   margin: 0;
   height: 100%;
@@ -13,8 +16,12 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: #5aadbb;
+    color: $color-hover;
   }
+}
+
+small {
+    font-size: 0.6em;
 }
 
 .main-container {
@@ -31,18 +38,20 @@ a {
 .header {
   display: flex;
   align-items: center;
-  background-color: #1f1f1f;
-}
-.header-title {
-  flex: 1;
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-.header-date {
-  flex: 1;
-  text-align: right;
-  margin: 1rem;
-  color: white;
+  background-color: $color-black;
+
+  .header-title {
+    flex: 1;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  .header-right {
+    flex: 1;
+    text-align: right;
+    margin: 1rem;
+    color: white;
+  }
 }
 
 .title {
@@ -73,7 +82,7 @@ a {
 .footer {
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: #1f1f1f;
+  background-color: $color-black;
   text-align: center;
   color: white;
 }
@@ -109,4 +118,8 @@ a {
 .tech-h3 {
   font-size: 1.5rem;
   margin: 0 0 2rem 0;
+}
+
+.text-muted {
+    color: lighten($color-black, 20%);
 }
